@@ -489,7 +489,7 @@ body {
 }
 /* benefits */
 .benefits {
-  padding-bottom: 94px;
+  padding-bottom: 94px 0;
 }
 
 .benefits__title {
