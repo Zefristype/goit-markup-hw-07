@@ -18,8 +18,10 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --white-text-color: #ffffff;
+  --white-background: #ffffff;
   --black-text-color: #000000;
   --accent-text-color: #2196f3;
+  --accent-background-color: #2196f3;
   --adress-text-color: rgba(255, 255, 255, 0.6);
   --btn-background-color: #f5f4fa;
   --footer-hero-color: #2f303a;
@@ -28,6 +30,10 @@
   --team-section-color: #f5f4fa;
   --social-links-color: #afb1b8;
   --btn-accent-color: #188ce8;
+  --backdrop-color: rgba(0, 0, 0, 0.5);
+  --feature-box-color: #f5f4fa;
+  --gallery-border-color: #eeeeee;
+  --gallery-overlay-color: rgba(33, 150, 243, 0.9);
 }
 /* сброс */
 h1,
@@ -78,7 +84,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--backdrop-color);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -96,7 +102,7 @@ img {
   padding: 40px;
   width: 528px;
   height: 581px;
-  background-color: #ffffff;
+  background-color: var(--white-background);
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -117,7 +123,7 @@ img {
   height: 30px;
   padding: 0;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--white-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -135,7 +141,7 @@ img {
 
 .modal__close:hover,
 .modal__close:focus .modal__icon-close {
-  fill: var(--accent-text-color);
+  fill: var(--btn-accent-color);
 }
 
 .modal__title {
@@ -244,7 +250,7 @@ img {
   background-image: url(../images/sprite/icon-check.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: #2196f3;
+  background-color: var(--accent-background-color);
   border: none;
 }
 
@@ -260,7 +266,7 @@ img {
   letter-spacing: 0.06em;
   border: none;
   color: var(--white-text-color);
-  background: var(--accent-text-color);
+  background: var(--accent-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -369,7 +375,7 @@ body {
   content: "";
   width: 100%;
   height: 4px;
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-background-color);
   border-radius: 2px;
 }
 
@@ -417,7 +423,7 @@ body {
   text-align: center;
   border-radius: 4px;
   color: var(--white-text-color);
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-background-color);
   cursor: pointer;
   border: none;
   font-weight: 700;
@@ -460,7 +466,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--team-section-color);
+  background: var(--feature-box-color);
   border-radius: 4px;
   width: 270px;
   height: 120px;
@@ -548,7 +554,7 @@ body {
 }
 
 .team__item {
-  background-color: var(--white-text-color);
+  background-color: var(--white-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -600,7 +606,7 @@ body {
 
 .team__link:hover,
 .team__link:focus {
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-background-color);
   color: var(--white-text-color);
 }
 /* clients */
@@ -756,7 +762,7 @@ body {
 
 .join__link:hover,
 .join__link:focus {
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-background-color);
 }
 
 /* footer-form */
@@ -809,7 +815,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border: none;
-  background: #2196f3;
+  background: var(--accent-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -875,7 +881,7 @@ body {
 .filter__btn:hover,
 .filter__btn:focus {
   color: var(--white-text-color);
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -896,9 +902,9 @@ body {
 
 .gallery__content {
   padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+  border-left: 1px solid var(--gallery-border-color);
+  border-bottom: 1px solid var(--gallery-border-color);
+  border-right: 1px solid var(--gallery-border-color);
 }
 
 .gallery__link:hover,
@@ -941,7 +947,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  background: rgba(33, 150, 243, 0.9);
+  background: var(--gallery-overlay-color);
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
