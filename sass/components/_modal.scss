@@ -77,7 +77,7 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__title {
+.form__title {
   margin-bottom: 12px;
   font-weight: 700;
 
@@ -89,7 +89,7 @@
   color: $title-text-color;
 }
 
-.modal__field {
+.form__field {
   position: relative;
 
   display: inline-block;
@@ -105,16 +105,16 @@
     margin-bottom: 20px;
   }
   &:focus-within {
-    .modal__icon {
+    .form__icon {
       fill: $accent-text-color;
     }
-    .modal__input {
+    .form__input {
       border-color: $accent-text-color;
     }
   }
 }
 
-.modal__icons {
+.form__icons {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -123,11 +123,11 @@
   height: 18px;
 }
 
-.modal__icon {
+.form__icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__input {
+.form__input {
   margin-top: 4px;
   padding-left: 42px;
 
@@ -142,7 +142,7 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__area {
+.form__area {
   padding: 12px 16px;
 
   height: 120px;
@@ -150,7 +150,7 @@
   resize: none;
 }
 
-.modal__checkbox-field {
+.form__checkbox-field {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,12 +164,12 @@
   color: $primary-text-color;
 }
 
-.modal__link {
+.form__link {
   margin-left: 8px;
   color: $accent-text-color;
 }
 
-.modal__checkbox-input {
+.form__checkbox-input {
   position: absolute;
 
   width: 1px;
@@ -185,7 +185,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked + .modal__checkbox-icon {
+  &:checked + .form__checkbox-icon {
     background-origin: border-box;
     background-image: url(../images/sprite/icon-check.svg);
     background-position: 50% 50%;
@@ -195,7 +195,7 @@
   }
 }
 
-.modal__checkbox-icon {
+.form__checkbox-icon {
   display: flex;
 
   width: 16px;
@@ -207,7 +207,7 @@
   border-radius: 2px;
 }
 
-.modal__btn {
+.form__btn {
   display: block;
 
   margin: 0 auto;
