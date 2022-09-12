@@ -1,12 +1,5 @@
+
 .benefits {
-  padding-bottom: 94px;
-}
-
-.benefits__title {
-  @extend %section-title;
-}
-
-.benefits__list {
   display: flex;
   gap: 30px;
   @extend %list;
@@ -16,7 +9,7 @@
   position: relative;
 }
 
-.benefits__desc {
+.benefits__title {
   position: absolute;
   bottom: 0;
 

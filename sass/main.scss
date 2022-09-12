@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/reset";
 @import "./utils/placeholders";
+@import "./components/section";
 @import "./components/container";
 @import "./components/body";
 @import "./components/header";
@@ -11,4 +12,5 @@
 @import "./components/clients";
 @import "./components/footer";
 @import "./components/modal";
-@import "./components/portfolio";
+@import "./components/filter";
+@import "./components/gallery";

@@ -15,16 +15,16 @@ img {
   height: auto;
 }
 
-.portfolio__gallery, .portfolio__filter, .join__list, .footer__contacts-list, .clients__list, .team__links-list, .team__list, .benefits__list, .feature__list, .contact-list, .header__site-nav {
+.gallery, .filter, .join__list, .footer__contacts-list, .clients, .socials, .team, .benefits, .feature, .contact-list, .header__site-nav {
   list-style: none;
   padding: 0;
 }
 
-.portfolio, .clients, .team, .feature {
+.section {
   padding: 94px 0;
 }
 
-.clients__title, .team__title, .benefits__title {
+.section__title {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
@@ -32,6 +32,28 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.section__title--visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section--nopaddingtop {
+  padding-top: 0;
+}
+
+.section--otherbackground {
+  background-color: #f5f4fa;
 }
 
 .container {
@@ -83,7 +105,7 @@ body {
   gap: 50px;
 }
 
-.header__link {
+.site-nav__link {
   display: block;
   padding: 32px 0;
   font-weight: 500;
@@ -94,7 +116,7 @@ body {
   color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__link:hover, .header__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
 }
 
@@ -107,6 +129,7 @@ body {
 .contact-list__link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -119,11 +142,11 @@ body {
   color: #2196f3;
 }
 
-.header__link--active-nav {
+.site-nav__link--active-nav {
   position: relative;
   color: #2196f3;
 }
-.header__link--active-nav::after {
+.site-nav__link--active-nav::after {
   position: absolute;
   bottom: -1px;
   display: block;
@@ -134,7 +157,7 @@ body {
   border-radius: 2px;
 }
 
-.header__icon {
+.contact-list__icon {
   display: block;
   margin-right: 10px;
   fill: currentColor;
@@ -188,21 +211,7 @@ body {
   background-color: #188ce8;
 }
 
-.feature__title--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.feature__list {
+.feature {
   display: flex;
   gap: 30px;
 }
@@ -235,10 +244,6 @@ body {
 }
 
 .benefits {
-  padding-bottom: 94px;
-}
-
-.benefits__list {
   display: flex;
   gap: 30px;
 }
@@ -247,7 +252,7 @@ body {
   position: relative;
 }
 
-.benefits__desc {
+.benefits__title {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -265,10 +270,6 @@ body {
 }
 
 .team {
-  background-color: #f5f4fa;
-}
-
-.team__list {
   display: flex;
   gap: 30px;
 }
@@ -284,7 +285,7 @@ body {
   padding: 30px 0;
 }
 
-.team__member {
+.team__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -293,24 +294,24 @@ body {
   color: #212121;
 }
 
-.team__position {
+.team__text {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
-.team__links-list {
+.socials {
   display: flex;
   justify-content: center;
   margin-top: 16px;
   gap: 10px;
 }
 
-.team__icon {
+.socials__icon {
   fill: currentColor;
 }
 
-.team__link {
+.socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,12 +321,12 @@ body {
   border-radius: 50%;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team__link:hover, .team__link:focus {
+.socials__link:hover, .socials__link:focus {
   background-color: #2196f3;
   color: #ffffff;
 }
 
-.clients__list {
+.clients {
   display: flex;
   gap: 30px;
 }
@@ -706,21 +707,7 @@ body {
   background-color: #188ce8;
 }
 
-.portfolio__title--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.portfolio__filter {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -748,7 +735,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio__gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -779,7 +766,7 @@ body {
   color: #212121;
 }
 
-.gallery__desc {
+.gallery__text {
   color: #757575;
   font-size: 16px;
   line-height: 1.88;

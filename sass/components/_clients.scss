@@ -1,12 +1,4 @@
 .clients {
-  @extend %section-padding;
-}
-
-.clients__title {
-  @extend %section-title;
-}
-
-.clients__list {
   display: flex;
   gap: 30px;
   @extend %list;
